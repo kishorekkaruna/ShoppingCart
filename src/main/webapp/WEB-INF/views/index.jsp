@@ -9,8 +9,7 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="resources/css/bootstrap.min.css"> 
-<link rel="stylesheet" href="resources/css/index.css">
+<link rel="stylesheet" href="resources/css/bootstrap.min.css">
 <script src="resources/js/Slider.js"></script>
 <script type="text/javascript"
 	src="http://uguru-realestate-us-jun202013.businesscatalyst.com/3d-slider/sliderengine/jquery.js"></script>
@@ -20,133 +19,16 @@
 	src="http://uguru-realestate-us-jun202013.businesscatalyst.com/3d-slider/sliderengine/initslider-1.js"></script>
 <title>ShoppingCart</title>
 <style>
-@import url(https://fonts.googleapis.com/css?family=Material+Icons|Roboto:400);
-
-@keyframes line-anim {
-    75% {
-        width: 130px;
-        transform: rotate(0);
-    }
-    100% {
-        width: 600px;
-        transform: rotate(0);
-    }
-}
-@keyframes btn-focus-anim {
-    0% {
-        box-shadow: 0 0 0 85px #673AB7;
-    }
-    100% {
-        box-shadow: 0 0 0 100px #4A148C;
-    }
-}
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 10vw;/* Preferred icon size */
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;/* Support for all WebKit browsers. */
-  vertical-align: sub;
-  -webkit-font-smoothing: antialiased;/* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;/* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;/* Support for IE. */
-  font-feature-settings: 'liga';
-}
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    outline: 0;
-}
 html, body {
-    text-decoration: none;
-    overflow: scroll;
-}
-/* form {
-    position: absolute;
-    width: 700px;
-    height: 96px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-} */
-#sbx {
-    position: relative;
-    top: -18px;
-    width: 546px;
-    border: none;
-    background: none;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 48px;
-}
-#sbx:focus ~ #btn {
-    color: white;
-    text-indent: 6px;
-    transition: .2s .4s;
-}
-#sbx:focus ~ #line {
-    animation: line-anim .5s both;
-}
-#sbx:focus::-webkit-input-placeholder {
-    text-indent: 100%;
-}
-#sbx:focus::-moz-placeholder {
-    text-align: centere;
-}
-#btn {
-    width: 96px;
-    height: 96px;
-    background: #4A148C;
-    color: transparent;
-    font-size: 48px;
-    text-indent: -100%;
-    vertical-align: middle;
-    border: 6px solid white;
-    border-radius: 50%;
-}
-#btn:focus {
-    text-indent: 10px;
-    color: white;
-    animation: btn-focus-anim .2s both;
-}
-#line {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 102px;
-    margin: auto;
-    width: 100px;
-    height: 0;
-    background: white;
-    border: 3px solid white;
-    border-radius: 3px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    transform: rotate(-135deg);
-    transform-origin: right;
-    z-index: -1;
-}
-::-webkit-input-placeholder {
-    color: white;
-    opacity: .6;
-    transition: .2s;
-}
-::-moz-placeholder {
-    color: white;
-    opacity: .6;
-    transition: .2s;
-}
+	text-decoration: none;
+	overflow: scroll;
+	background: url(resources/img/shopping.jpg) no-repeat center center
+		fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	}
 
 ul {
 	list-style-type: none;
@@ -172,31 +54,65 @@ ul li:hover {
 	display: block;
 }
 
-li a:hover:not(.active)
+li
+
+
+ 
+
+
+a
+
+
+
+
+:hover
+
+
+
+
+:not
+
+
+ 
+
+
+(
+.active
+
+
+ 
+
+
+)
 {
-background-color:#111;
+background-color
+
+
+
+
+:
+
+
+ 
+
+
+#111
+
+
+
+
+;
 }
 .active {
 	background-color: #4CAF50;
 }
-
-.background {
-	opacity: o.5;
-	filter: alpha(opacity = 50);
-	position: absolute;
-	background-size: inherit;
-	background-repeat: inherit;
-	width: 100%;
-	border-spacing: inherit;
-	-webkit-background size: 500px 50px;
-}
-
 a {
 	color: white;
 	font-family: cursive;
 }
 
 a:hover {
+	color: White;
 	font-family: cursive;
 	padding: 12px 16px;
 	text-decoration: none;
@@ -205,37 +121,53 @@ a:hover {
 
 .header {
 	top: 0px;
+	bottom: 700px;
 	width: 100%;
 	background: #e80950;
-	padding-top: 10px;
+	padding-top: 0px;
 	position: fixed;
 	z-index: 999;
+	width: 100%;
+	height:169px;
+}
+.top{
+padding-top:110px;
 }
 </style>
 </head>
 
-<body class="free-trail-form background"
-	background="resources/img/shopping.jpg">
+<body class="free-trail-form background" background="url(resources/img/shopping.jpg)">
+	 <h3>
+			<!-- <marquee width="35%" DIRECTION=LEFT><MARQUEE DIRECTION=RIGHT> -->
+				<c:if test="${pageContext.request.userPrincipal.name != null }">
+			HI.. ${pageContext.request.userPrincipal.name}<br>
+					<br>
+				</c:if>
+			<!-- </marquee></MARQUEE> -->
+		</h3>
+		<br><br>
 
 	<div class="header">
 
 		<br>
-		<!-- search bar -->
-		<div style="float: left;">
+			<div style="float: left;">
 			<img alt="picture1" src="resources/img/lovekart1.png" height="52"
 				width="150">
 		</div>
+		
 
-		<div class="forum">
+	<!-- search bar -->
+
+		<!--  <div class="forum">
 			<input type="search" id="sbx" name="searchbox"
-				placeholder="Click Here To Search...." /> <input type="submit"
+				placeholder="Click Here To Search..." /> <input type="submit"
 				id="btn" class="material-icons" value="send" name="button" /> <span
 				id="line"></span>
-		</div>
-		<br>
-
+		</div>  -->
+		
+		
 		<!-- NavigatorBar -->
-		<div>
+		<div class="top">
 			<ul>
 				<li><a class="active" href="index">Home</a></li>
 				<li><a href="MenPage">Men</a></li>
@@ -243,13 +175,22 @@ a:hover {
 				<li><a href="ElectronicsPage">Electronics</a></li>
 				<li><a href="BooksPage">Books</a></li>
 				<li><a href="SportsPage">Sports</a></li>
-				<li><a href="LoginPage"><span
-						class="glyphicon glyphicon-log-out"></span>Logout</a></li>
-				<li><a href="LoginPage"> <span
-						class="glyphicon glyphicon-log-in"></span>Login
-				</a></li>
-				<li><a href="SignupPage"> <span class="fa fa-user-plus"></span>Signup
-				</a></li>
+				
+				<ul class=navbar-right>
+					<c:if test="${pageContext.request.userPrincipal.name != null }">
+						<li><a href="myCart"><span
+								class="fa fa-shopping-cart fa-lg"></span>Cart</a></li>
+						<li><a href="signout"><span
+								class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+					</c:if>
+					<c:if test="${pageContext.request.userPrincipal.name == null }">
+
+						<li><a href="SignupPage"> <span class="fa fa-user-plus"></span>Signup
+						</a></li>
+						<li><a href="LoginPage"> <span class="fa fa-sign-in"></span>Login
+						</a></li>
+					</c:if>
+				</ul>
 
 
 			</ul>
@@ -287,6 +228,9 @@ a:hover {
 		</c:when>
 		<c:when test="${isUserClickedProductDetails=='true' }">
 			<jsp:include page="ProductDetails.jsp"></jsp:include>
+		</c:when>
+		<c:when test="${isUserClickedmyCart=='true' }">
+			<jsp:include page="Cart.jsp"></jsp:include>
 		</c:when>
 		<c:otherwise>
 			<jsp:include page="Carousel.jsp"></jsp:include>

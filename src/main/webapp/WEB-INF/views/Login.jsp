@@ -131,7 +131,7 @@ span.input-group-addon i {
 								</div>
 							</div>
 						</div>
-						
+						${error }${logout}<br>
 							<a href="PasswordPage">ForgotPassword?</a>
 							<button type="submit" id="button" class="btn btn-primary btn-lg btn-block login-button">Login</button>
 						

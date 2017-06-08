@@ -18,18 +18,25 @@ import com.niit.shoppingcart.domain.User;
 
 @Controller
 public class SignupController {
-	
-	@Autowired UserDAO userDAO;
-	@Autowired User user;
-	@Autowired Role role;
-	@Autowired RoleDAO roleDAO;
-	@Autowired ProductDAO productDAO;
-	
-	
-	
-	
+
+	@Autowired
+	UserDAO userDAO;
+	@Autowired
+	User user;
+	@Autowired
+	Role role;
+	@Autowired
+	RoleDAO roleDAO;
+	@Autowired
+	ProductDAO productDAO;
+
 	@RequestMapping("newUser")
-	public String newUser(@ModelAttribute User user,Model model)
+	public String newUser(@ModelAttribute User user,Model model){
+	String message;
+	if(userDAO.isAllReadyRegister(user.getEmail(), true)){
+		message = "Email ID alreay Registered!! Register With Different ID";
+	}
+	else
 	{
 		
 		user.setEnabled(true);
@@ -44,31 +51,32 @@ public class SignupController {
 		
 		userDAO.save(user);
 		roleDAO.save(role);
+		message="You Have Succesfully Registered";
+	}
 		model.addAttribute("isUserClickedSignup","true");
+		model.addAttribute("message", message);
+
 		return "index";
 	}
+
 	@RequestMapping("afterLogin")
-	public String loginValidate(Principal p, Model model){
-		
-		String email=p.getName();
-		User user=userDAO.getMail(email);
-		Role role=roleDAO.getUserByUserMailId(email);
-		String validator=role.getRole();
-		if(validator.equals("ROLE_ADMIN")){
-			
-		
-	
-		return "admin/AdminHome";
-		}
-		else if(validator.equals("ROLE_USER")){
-			List<Product> productList=productDAO.list();
-			model.addAttribute("productList", productList );
+	public String loginValidate(Principal p, Model model) {
+
+		String email = p.getName();
+		User user = userDAO.getMail(email);
+		Role role = roleDAO.getUserByUserMailId(email);
+		String validator = role.getRole();
+		if (validator.equals("ROLE_ADMIN")) {
+
+			return "admin/AdminHome";
+		} else if (validator.equals("ROLE_USER")) {
+			List<Product> productList = productDAO.list();
+			model.addAttribute("productList", productList);
 			return "index";
-		}
-		else{		
-			
+		} else {
+
 			return "Login";
-	}
+		}
 	}
 
 }

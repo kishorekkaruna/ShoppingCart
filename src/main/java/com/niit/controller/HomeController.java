@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.shoppingcart.dao.ProductDAO;
 import com.niit.shoppingcart.domain.Product;
@@ -41,13 +43,13 @@ public class HomeController {
 		model.addAttribute("isUserClickedIndex","true");
 		return "index";
 	}
-	@RequestMapping("/LoginPage")
-	public String loginPage(Model model)
-	{
-		model.addAttribute("isUserClickedLogin", "true");
-	
-		return "index";
-	}
+//	@RequestMapping("/LoginPage")
+//	public String loginPage(Model model)
+//	{
+//		model.addAttribute("isUserClickedLogin", "true");
+//	
+//		return "index";
+//	}
 	
 	@RequestMapping("/SignupPage")
 	public String registrationPage(Model model)
@@ -98,6 +100,24 @@ public class HomeController {
 		
 		return "index";
 	}
+	
+	@RequestMapping("/LoginPage")
+	public ModelAndView loginpage(@RequestParam(value = "error", required = false) String error, 
+			@RequestParam(value = "logout", required = false) String logout, Model model) {
+		ModelAndView mv = new ModelAndView("index");
+		
+		if(error != null) {
+			model.addAttribute("error", "Mail Id or Password Incorrect");
+			}
+		
+		if(logout != null) {
+			model.addAttribute("logout", "Logged out Successfully");
+			}
+		
+		mv.addObject("isUserClickedLogin", true);
+		return mv;
+	}
+
 	
 	
 }

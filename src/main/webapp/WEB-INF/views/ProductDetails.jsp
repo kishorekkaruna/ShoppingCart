@@ -3,6 +3,18 @@
     pageEncoding="ISO-8859-1"%>
 
 <style type="text/css">
+.main-center {
+	margin-top: 165px;
+	margin: 200px auto;
+	max-width: 100%;
+	padding: 10px 40px;
+	background: #fff;
+	color: #FFF;
+	text-shadow: none;
+	-webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.31);
+	-moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.31);
+	box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.31);
+} 
 .img {
 padding-top: 150px;
 position: relative;
@@ -15,6 +27,9 @@ backgroun-size:;
 margin-left: 7em;
 padding-bottom:9em;
 }
+h5,h4,h2{
+color:black;
+}
 </style>
 <script>
 function goBack() {
@@ -24,7 +39,8 @@ function goBack() {
 
 
 <body>
-<table>
+
+<table class="main-center">
 <thead>
 <h1 align="center">${product.pname}</h1></thead>
 <tr><td><div class="img">
@@ -38,7 +54,7 @@ function goBack() {
 <br><br>
 <h2 style="color: red;">${msg}</h2>
 <c:if test="${pageContext.request.userPrincipal.name != null }">
-<button type="submit" class="log-btn" ><a href="addToCart?pid=${product.pid}">Proceed to Cart</a></button>
+<button type="submit" class="log-btn" ><a href="addtoCart?pid=${product.pid}">Proceed to Cart</a></button>
 </c:if>
 <c:if test="${pageContext.request.userPrincipal.name == null }">
 <button type="submit" class="log-btn" ><a href="LoginPage">Proceed to Cart</a></button>
@@ -48,4 +64,5 @@ function goBack() {
 
 </td>
 </table>
+
 </body>

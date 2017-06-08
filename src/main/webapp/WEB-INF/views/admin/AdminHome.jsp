@@ -11,74 +11,7 @@
 	href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="resources/css/bootstrap.min.css">
   <link rel="stylesheet" href="resources/css/index.css"> 
- <!-- <style type="text/css">
-ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: #333;
-	bottom: 0px;
-}
 
-li {
-	float: left;
-}
-
-li a {
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-
-ul li:hover {
-	 display: block; 
-}
-
-ul ul li:hover {
-	
-}
-
-li a:hover:not (.active ) {
-	background-color: #111;
-}
-
-.active {
-	background-color: #4CAF50;
-}
-
-.background {
-	opacity: o.5;
-	filter: alpha(opacity = 50);
-	position: absolute;
-}
-
-a {
-	color: white;
-	font-family: cursive;
-}
-
-a:hover {
-	font-family: cursive;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-}
-
-.header {
-	top: 0px;
-	width: 100%;
-	background: rgba(8, 151, 234, 0.92);
-	padding-top: 20px;
-	padding-bottom: 0px;
-	position: fixed;
-	z-index: 999;
-}
-</style>
- 
- -->
  <style>
  .kishore{
  margin-top: 30px;

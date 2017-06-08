@@ -1,4 +1,25 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<style>
+h1{
+padding-top: 405px;
+}
+</style>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+<h1>Mycart</h1>
+
+
+<c:if test="${pageContext.request.userPrincipal.name != null }">
+<button type="submit" class="log-btn" ><a href="proceed" float:right" >Proceed to Delivery</a></button>
+</c:if>
+<c:if test="${pageContext.request.userPrincipal.name == null }">
+<button type="submit" class="log-btn" ><a href="LoginPage" float="right">Proceed to Delivery</a></button>
+</c:if>
+<button type="submit" class="log-btn" onclick="goBack()" float="left">Go Back</button>
+
 <table>
 <thead>
 <tr>
