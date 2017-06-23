@@ -6,3 +6,6 @@ body, html{
  	font-family: 'Oxygen', sans-serif;
 }
 </style>
+<body>
+<jsp:include page="ProductList.jsp"></jsp:include>
+</body>

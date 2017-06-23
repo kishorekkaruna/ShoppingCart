@@ -82,7 +82,7 @@ input, input::-webkit-input-placeholder {
 
 .main-center {
 	margin-top: 165px;
-	margin: 200px auto;
+	margin: 20px auto;
 	max-width: 400px;
 	padding: 10px 40px;
 	background:#a8df00;

@@ -13,6 +13,16 @@
   <link rel="stylesheet" href="resources/css/index.css"> 
 
  <style>
+ html, body {
+	text-decoration: none;
+	overflow: scroll;
+	background: url(resources/img/shopping.jpg) no-repeat center center
+		fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	}
  .kishore{
  margin-top: 30px;
  margin-bottom: 100px;
@@ -152,7 +162,7 @@ font-size:20px;
 										<li><a href="AddProduct">AddProduct</a></li>
 										<li><a href="ViewProduct">ViewProduct</a></li>
 									</ul></li>
-									<li><a href="IndexPage"><span class="fa fa-"></span>Logout</a></li>
+									<li><a href="home"><span class="fa fa-"></span>Logout</a></li>
 							</ul>
 		</nav></ul></div></div>
 			</div>

@@ -1,5 +1,6 @@
 package com.niit.controller;
 
+import java.security.Principal;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -37,59 +38,29 @@ public class HomeController {
 		return "index";
 	}
 	
-	@RequestMapping("/IndexPage")
+	@RequestMapping("/home")
 	public String index(Model model)
 	{
-		model.addAttribute("isUserClickedIndex","true");
+model.addAttribute("message", "Thank you for visiting Shopping Cart");
+		
+		List<Product> productList=productDAO.list();
+		model.addAttribute("productList", productList );
 		return "index";
 	}
-//	@RequestMapping("/LoginPage")
-//	public String loginPage(Model model)
-//	{
-//		model.addAttribute("isUserClickedLogin", "true");
-//	
-//		return "index";
-//	}
 	
 	@RequestMapping("/SignupPage")
 	public String registrationPage(Model model)
 	{
 		model.addAttribute("isUserClickedSignup", "true");
-		
 		return "index";
 	}
-	@RequestMapping("/BooksPage")
-	public String booksPage(Model model)
-	{
-		model.addAttribute("isUserClickedBooks","true");
-		
-		return "index";
-	}
-	@RequestMapping("/ElectronicsPage")
-	public String electronicsPage(Model model)
-	{
-		model.addAttribute("isUserClickedElectronics","true");
-		
-		return "index";
-	}
-	@RequestMapping("/MenPage")
-	public String menPage(Model model)
+	
+	@RequestMapping("/CategoryBy")
+	public String menPage(Principal p, @RequestParam(value= "category") String cname,Model model)
 	{
 		model.addAttribute("isUserClickedMen","true");
-		
-		return "index";
-	}
-	@RequestMapping("/SportsPage")
-	public String sportsPage(Model model)
-	{
-		model.addAttribute("isUserClickedSports","true");
-		
-		return "index";
-	}
-	@RequestMapping("/WomenPage")
-	public String womenPage(Model model)
-	{
-		model.addAttribute("isUserClickedWomen","true");
+		List<Product> productList=productDAO.getByCategory(cname);
+		model.addAttribute("productList", productList );
 		
 		return "index";
 	}

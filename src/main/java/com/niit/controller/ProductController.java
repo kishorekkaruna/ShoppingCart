@@ -85,4 +85,5 @@ public class ProductController {
 	productDAO.deleteById(pid);;
 	return "redirect:ViewProduct";	
 	}
+	
 }

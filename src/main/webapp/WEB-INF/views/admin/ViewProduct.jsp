@@ -6,8 +6,8 @@
 position:relative;
 }
 .main-center {
-	margin-top: 165px;
-	margin: 200px auto;
+	margin-top: 0px;
+	margin: 120px auto;
 	max-width: 100%;
 	padding: 10px 40px;
 	background: #a8df00;
@@ -27,6 +27,7 @@ position:relative;
 				<th>Product Id</th>
 				<th>Product Name</th>
 				<th>Product Price</th>
+				<th>Product Description</th>
 				<th>Product Category</th>
 				<th>Product Supplier</th>
 				<th>Uploaded Date</th>
@@ -43,6 +44,7 @@ position:relative;
 				<td>${prod.pid }</td>
 				<td>${prod.pname }</td>
 				<td>${prod.price }</td>
+				<td>${prod.description}</td>
 				<td>${prod.category }</td>
 				<td>${prod.supplier }</td>
 				<td>${prod.date }</td>

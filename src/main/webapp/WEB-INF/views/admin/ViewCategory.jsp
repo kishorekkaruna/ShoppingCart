@@ -24,6 +24,7 @@ position:relative;
 	<table class="table1 table">
 		<thead>
 			<tr>
+				<th>S_NO</th>
 				<th>Category Id</th>
 				<th>Category Name</th>
 				<th>Description</th>
@@ -32,10 +33,10 @@ position:relative;
 			</tr>
 		</thead>
 	
-	<c:forEach items="${categoryList}" var="cat">
+	<c:forEach items="${categoryList}" var="cat" varStatus="status">
 		
 			<tr>
-				
+				<td>${status.count }</td>
 				<td>${cat.id }</td>
 				<td>${cat.name }</td>
 				<td>${cat.description }</td>

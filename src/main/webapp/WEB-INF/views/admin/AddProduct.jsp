@@ -84,7 +84,7 @@ input, input::-webkit-input-placeholder {
 
 .main-center {
 	margin-top: 165px;
-	margin: 200px auto;
+	margin: 20px auto;
 	max-width: 400px;
 	padding: 10px 40px;
 	background: #a8df00;
@@ -227,6 +227,18 @@ span.input-group-addon i {
 			</div>
 			
 			<div class="form-group">
+				<label for="name" class="cols-sm-2 control-label">Product Description</label>
+				<div class="cols-sm-10">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-list fa"
+							aria-hidden="true"></i></span> <input type="text" class="form-control"
+							name="description" id="description" min="100" max="1000" placeholder="Description"
+							required />
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-group">
 				<label for="date" class="cols-sm-2 control-label">Category
 					Name</label>
 				<div class="cols-sm-10">
@@ -238,6 +250,7 @@ span.input-group-addon i {
 							id="category"  required></option>
 						<c:forEach items="${categoryList}" var="category">
 							<option value="${category.name }">${category.name }</option>
+							
 						</c:forEach>
 						</select>
 					</div>

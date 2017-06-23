@@ -81,8 +81,8 @@ padding: 8px 12px !important;
  	margin-top: 165px;
  	margin: 175px auto;
  	max-width: 400px;
-    padding: 10px 40px;
-	background:#009edf;;
+    padding: 30px 40px;
+	background:rgba(125, 129, 134, 0.14);
 	    color: #FFF;
     text-shadow: none;
 	-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
@@ -107,7 +107,7 @@ span.input-group-addon i {
 <div class="container">
  <div class="row">
 
-<div class="main-login main-center">
+<div class="main-center main-login ">
 					<form action="isValidUser" method="post" >
 					
 						<label for="name" class="cols-sm-2 control-label" style="text-align: center;">Login</label>
@@ -117,7 +117,7 @@ span.input-group-addon i {
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="email" id="name"  placeholder="id@email.com"/>
+									<input type="email" class="form-control" name="email" id="email"  placeholder="id@email.com"/>
 								</div>
 							</div>
 						</div>
@@ -127,16 +127,13 @@ span.input-group-addon i {
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="password" id="name"  placeholder="Password"/>
+									<input type="password" class="form-control" name="password" id="password"  placeholder="Password"/>
 								</div>
 							</div>
 						</div>
 						${error }${logout}<br>
 							<a href="PasswordPage">ForgotPassword?</a>
 							<button type="submit" id="button" class="btn btn-primary btn-lg btn-block login-button">Login</button>
-						
-							<button type="submit" id="button" class="btn btn-primary btn-lg btn-block login-button">Signup</button>
-						
 					</form>		
 		</div>
 	</div>

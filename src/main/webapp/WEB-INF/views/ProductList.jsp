@@ -9,7 +9,9 @@
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
         @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&subset=latin-ext,vietnamese');   
-body{font-family: 'Quicksand', sans-serif;}
+body{
+font-family: 'Quicksand', sans-serif;
+}
    h4{
     	font-weight: 600;
 	}
@@ -22,7 +24,7 @@ body{font-family: 'Quicksand', sans-serif;}
 	}
 	.price{
 	
-		font-size: 30px;
+		font-size: 25px;
     	margin: 0 auto;
     	color: #333;
 	}
@@ -31,22 +33,22 @@ body{font-family: 'Quicksand', sans-serif;}
 		opacity:1.00;
 		-webkit-transition: all 0.5s; 
 		transition: all 0.5s;
-	}
+		}
 	.thumbnail:hover{
 		opacity:0.70;
 		box-shadow: 0px 0px 10px #4bc6ff;
 	}
 	.line{
-		margin-bottom: 5px;
+		margin-bottom: 10px;
 	}
-	@media screen and (max-width: 770px) {
+	 @media screen and (max-width: 600px) {
 		.right{
 			float:left;
 			width: 100%;
 		}
-	}
+	} 
 	span.thumbnail {
-        border: 1px solid #00c4ff !important;
+        border: 10px solid #00c4ff !important;
     border-radius: 0px !important;
     -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.16);
     -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.16);
@@ -54,10 +56,10 @@ body{font-family: 'Quicksand', sans-serif;}
 	padding: 10px;
 }
 .container 
-{margin-top:180px; margin-bottom:30px;}
+{margin-top:160px; margin-bottom:300px;}
 button {    margin-top: 6px;
 }
-h4{margin-top:30px; margin-bottom:30px;}
+h4{margin-top:10px; margin-bottom:30px;}
 .right {
     float: right;
     border-bottom: 2px solid #0a5971;
@@ -67,52 +69,35 @@ h4{margin-top:30px; margin-bottom:30px;}
     background-color: #19b4e2;
     border-color: #19b4e2;
 	font-size:13px;
-	font-weight:600;
+	font-weight:60;
 }
     </style>
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
-<body>
-<!DOCTYPE html>
-<html lang="en">
-    <head> 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-		<!-- Website CSS style -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Pacifico&subset=latin-ext,vietnamese" rel="stylesheet">
-		<!-- Website Font style -->
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		<link rel="stylesheet" href="product.css">
-		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&subset=latin-ext,vietnamese" rel="stylesheet">
-
-
-		<title>Product Shop Responsive </title>
-	</head>
 	<body>
-		<div class="container">
+	
+		 <div class="container">
 		<h3>NEW COLLECTION</h3>
-	<div class="row"> 
+		
+	<!-- <div class="row">  -->
 	
     	<!-- BEGIN PRODUCTS -->
     	<c:forEach items="${productList}" var="prod">
-  		<div class="col-md-3 col-sm-6">
+  		<div class="col-md-4 col-sm-10">
     		<span class="thumbnail">
-      			<a href="ProductDetails?pid=${prod.pid}"><img src="resources/img/Product/${prod.pid}.jpg"alt="..."></a>
+      			<a href="ProductDetails?pid=${prod.pid}"><img class="image-responsive" src="resources/img/Product/${prod.pid}.jpg" alt="${prod.pname }"></a>
       			<h4>Name : ${prod.pname }</h4>
       			<!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p> -->
       			<hr class="line">
       			<div class="row">
-      				<div class="col-md-6 col-sm-6">
+      				<div class="col-md-4 col-sm-6">
       					<p class="price"> <span class="fa fa-inr"></span>${prod.price }</p>
       				</div>
       				<div class="col-md-6 col-sm-6">
       				 <a href="ProductDetails?pid=${prod.pid}" >	<button class="btn btn-info right" > Add To Cart</button></a>
       				</div>
-      				
+      			
       			</div>
     		</span>
   		</div>
@@ -121,6 +106,7 @@ h4{margin-top:30px; margin-bottom:30px;}
 
 		<!-- END PRODUCTS -->
 	</div>
+	
 </div> <!-------container----->
 
 
@@ -133,6 +119,5 @@ h4{margin-top:30px; margin-bottom:30px;}
 <script type="text/javascript">
 
 </script>
-</body>
-</html>
+
 

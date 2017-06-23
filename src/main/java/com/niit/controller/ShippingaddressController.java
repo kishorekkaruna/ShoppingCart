@@ -1,4 +1,4 @@
-package com.niit.controller;
+	package com.niit.controller;
 
 import java.security.Principal;
 import java.util.List;
@@ -89,13 +89,18 @@ public class ShippingaddressController {
 		String email  = p.getName();
 		
 		List<Cart> cartList = cartDAO.list(email);
-		
+		System.out.println(email);
+		System.out.println(cartList);
+		long sum=cartDAO.getTotalAmount(email);
+		model.addAttribute("total", sum);
+		System.out.println(sum);
 		for(Cart crt : cartList){
 			crt.setShippingId(shippingId);
+			
 			cartDAO.save(crt);
 			
 		}
-		model.addAttribute("Successfully", true);
+		model.addAttribute("Payment", true);
 		
 		return "UserLogin";
 		

@@ -9,10 +9,11 @@
 		<!-- http://locahost:8080/ShoppingCart/intercept_url -->
 
 		<!-- intercept url starting -->
-		<!-- <security:intercept-url pattern="/manage**" access="hasRole('ROLE_ADMIN')" 
-			/> <security:intercept-url pattern="/myCart/**" access="hasRole('ROLE_USER')" 
-			/> <security:intercept-url pattern="/cart_checkout**" access="hasRole('ROLE_USER')" 
-			/> --><!-- intercept url Ending -->
+		<!-- <security:intercept-url pattern="/manage**" access="hasRole('ROLE_ADMIN')"/>  -->
+			<security:intercept-url pattern="/myCart/**" access="hasRole('ROLE_USER')" />
+			
+			<security:intercept-url pattern="/cart_checkout**" access="hasRole('ROLE_USER')" /> 
+			<!-- intercept url Ending -->
 
 
 		<!-- <security:access-denied-handler error-page="/accessDenied" /> <security:csrf 
@@ -23,7 +24,7 @@
 
 		<!-- login is name of your login page -->
 		<!-- j_spring_security_check should same as in the login.jsp <form action="/j_spring_security_check" -->
-		<!-- <security:form-login login-page="/login" -->
+		<!--  <security:form-login login-page="/login"/> -->
 		<security:form-login login-processing-url="/isValidUser"
 			default-target-url="/afterLogin" authentication-failure-url="/LoginPage?error"
 			username-parameter="email" password-parameter="password" />

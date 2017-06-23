@@ -85,7 +85,7 @@ input, input::-webkit-input-placeholder {
 	margin: 176px auto;
 	max-width: 400px;
 	padding: 10px 40px;
-	background: #009edf;
+	background: rgba(125, 129, 134, 0.14);
 	color: #FFF;
 	text-shadow: none;
 	-webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.31);

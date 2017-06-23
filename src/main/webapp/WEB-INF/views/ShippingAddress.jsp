@@ -73,8 +73,37 @@
 			return false;
 		}
 	}
-</script></head>
+</script>
+<style>
+.main-login{
+ 	background-color: #fff;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 15px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+.main-center{
+ 	margin-top: 165px;
+ 	margin: 175px auto;
+ 	max-width: 400px;
+    padding: 30px 40px;
+	background:rgba(125, 129, 134, 0.14);
+	    color: #FFF;
+    text-shadow: none;
+	-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+
+}
+</style>
+</head>
 <body>
+System.out.println("hiiiiiiiii");
+<div class="main-login main-center">
 	<form action="newAddress" method="post"
 		onsubmit="return formShipping()">
 		<h1>New Shipping Address</h1>
@@ -83,28 +112,28 @@
 			<div class="form-group ">
 				<input type="text" class="form-control" placeholder="user Name"
 					name="userName" id="userName" value="${shipping.userName}">
-				<i class="fa fa-user"></i>
+				
 			</div>
 			<div class="form-group log-status">
 				<input type="text" class="form-control" placeholder="Mobile Number"
 					name="mobileNumber" id="mobileNumber"
-					value="${shipping.mobileNumber}"> <i class="fa fa-lock"></i>
+					value="${shipping.mobileNumber}"> 
 			</div>
 			<div class="form-group log-status">
 				<input type="text" class="form-control"
 					placeholder="Shipping Address" name="userAddress" id="userAddress"
-					value="${shipping.userAddress}"> <i class="fa fa-lock"></i>
+					value="${shipping.userAddress}"> 
 			</div>
 			<div class="form-group log-status">
 				<input type="text" class="form-control"
 					placeholder="Shipping city code" name="userCityCode"
-					id="userCityCode" value="${shipping.userCityCode}"> <i
-					class="fa fa-lock"></i>
+					id="userCityCode" value="${shipping.userCityCode}"> 
 			</div>
 
 			<button type="submit" class="log-btn">Submit</button>
 		</div>
 </form>
+</div>
 </body>
 
 

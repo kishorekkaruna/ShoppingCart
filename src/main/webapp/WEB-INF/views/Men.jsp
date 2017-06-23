@@ -8,5 +8,10 @@ body, html{
 }
 </style>
 
+<body>
+<jsp:include page="ProductList.jsp"></jsp:include>
+<%-- <c:if test="">
 
+</c:if> --%>
+</body>
 
